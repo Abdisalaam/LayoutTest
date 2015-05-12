@@ -106,7 +106,17 @@ for(var i=0;i< myArray.length;i++)
   	<header data-role="header">
   		<h1>Soorten</h1>
 		<a href="#planning" data-icon="grid">Planning</a>
-		<a href="#" data-icon="bullets">Meer</a>
+		<ul class="ui-listview-outer" data-role="listview">
+			<li data-role="collapsible" data-icon="bullets" data-iconpos="right" data-corners="false" data-shadow="false">
+               <ul data-role="listview"  data-shadow="false" data-inset="true">
+               <li><a href="#">Bel</a></li>
+                 <li><a href="#">Mail</a></li>
+               <li><a href="#">Contacten</a></li>
+                </ul>
+			</li>
+			
+		</ul>
+	
   	</header>
 	</div>
        	<div data-role="content">
