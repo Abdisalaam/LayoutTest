@@ -11,9 +11,11 @@
 	  <title>Eten app</title>
 
            <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		    <script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
+			  <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
 	   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
-	   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
-	   <script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
+	 
+	  
 
     <script type="text/javascript" charset="utf-8">
     var pictureSource; 
@@ -95,7 +97,7 @@ for(var i=0;i< myArray.length;i++)
   <body>
   
   
-  <div data-role="page" id="page">
+  <div data-role="page" id="page" data-theme="a">
   	<header data-role="header">
   		<h1>Soorten</h1>
 		
@@ -129,171 +131,8 @@ for(var i=0;i< myArray.length;i++)
 	  </div>
 	  
 	  
-	  
-	  
-	   <div data-role="page" id="Fastfood">
-  	<header data-role="header">
-  		<h1>Fast food</h1>
-		<a href="#page" data-icon="home">Home</a>
-		<a href="#planning" data-icon="grid">Planning</a>
-  	</header>
-	
-  	<div id="inhoudfastfood" data-role="content">
-  		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"><h1>Foto een</h1><img  src="images/fastFood/1.jpg" alt="foto1"/><p>Lekker hamburger met uien en kaas</p></a></li>
-		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/fastFood/2.jpg" alt="foto2"/><p>Lekker kipburger met ui, friet en sla</p></a></li>
-		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/fastFood/3.jpg" alt="foto3"/><p>Pizza vegi met olijven, paprika en uien</p></a></li>
-		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/fastFood/4.jpg" alt="foto4"/><p>Kip vleugels met sla en friet</p></a></li>
-	         <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/fastFood/5.jpg" alt="foto5"/></a><p>Broodje donor</p></li>
-
-		</ul>
-  	</div>
-  	
-  	
-  <footer data-role="footer" data-position="fixed">
-  <nav data-role="navbar">
-	 <ul id="tab-bar">
-    <li>
-       <a href="#"  data-icon="info">Locatie</a>
-    </li>
- 
-    <li>
-          <a href="#" data-icon="camera">Camera</a>
-    </li>
- 
-    <li>
-       <a href="#"  data-icon="gear">Toestel</a>
-    </li>
-    </ul>
-	</nav>
-      </footer>
-	  </div>
-	  
-<div data-role="page" id="Seafood" data-theme="a">
-  	<header data-role="header">
-  		<h1>Sea food</h1>
-		<a href="#page" data-icon="home">Home</a>
-		<a href="#planning" data-icon="grid">Planning</a>
-  	</header>
-	
-  	<div id="inhoudseafood" data-role="content">
-  		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"> <h1>Foto een</h1><img src="images/seaFood/1.jpg" alt="foto1"/><p>Reuze garnalen met koriander</p></a></li>
-		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/seaFood/2.jpg" alt="foto1"/><p>Maxicanse sea coctail</p></a></li>
-		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/seaFood/3.jpg" alt="foto1"/><p>Lekker gemengde zee vruchten</p></a></li>
-		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/seaFood/4.jpg" alt="foto1"/><p>Lekker Taaise garnalen met uien en kaas</p></a></li>
-	     <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/seaFood/5.jpg" alt="foto1"/><p>Lekker gegraild Taaise garnalen met uien en tomaten</p></a></li>
-		
-		</ul>
-  	</div>
-  	
-  	
-  <footer data-role="footer" data-position="fixed">
-  <nav data-role="navbar">
-	 <ul id="tab-bar">
-     <li>
-       <a href="#"  data-icon="info">Locatie</a>
-    </li>
- 
-    <li>
-          <a href="#" data-icon="camera">Camera</a>
-    </li>
- 
-    <li>
-       <a href="#"  data-icon="gear">Toestel</a>
-    </li>
-    </ul>
-	</nav>
-      </footer>
-	  </div>
-	  	  
-
-		  <div data-role="page" id="Fruit">
-  	<header data-role="header">
-  		<h1>Fruit</h1>
-		<a href="#page" data-icon="home">Home</a>
-		<a href="#" data-icon="grid">Planning</a>
-  	</header>
-	
-  	<div id="inhoudFruit" data-role="content">
-	
-	<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"> <h1>Foto een</h1><img src="images/fruit/1.jpg" alt="foto1"/><p>Troepische fruiten</p></a></li>
-		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/fruit/2.jpg" alt="foto2"/><p>Aardbei in yougrt</p></a></li>
-		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/fruit/3.jpg" alt="foto3"/><p>Watermelon met mint bladeren</p></a></li>
-		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/fruit/4.jpg" alt="foto4"/><p>Oasis fruiten</p></a></li>
-		 <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/fruit/5.jpg" alt="foto5"/><p>Druiven met mango pure</p></a></li>
-		
-		</ul>
-  		
-  	</div>
-  	
-  	
-  <footer data-role="footer" data-position="fixed">
-  <nav data-role="navbar">
-	 <ul>
-    <li>
-       <a href="#"  data-icon="info">Locatie</a>
-    </li>
- 
-    <li>
-          <a href="#" data-icon="camera">Camera</a>
-    </li>
- 
-    <li>
-       <a href="#"  data-icon="gear">Toestel</a>
-    </li>
-    </ul>
-	</nav>
-      </footer>
-	  </div>
-	  
-	  	
-
-		<div data-role="page" id="Veg">
-  	<header data-role="header">
-  		<h1>Vegiteraian </h1>
-		<a href="#page" data-icon="home">Home</a>
-		<a href="#planning" data-icon="grid">Planning</a>
-		</header>
-	
-  	<div id="inhoudVeg" data-role="content">
-	
-	<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"> <h1>Foto een</h1><img src="images/vegterian/1.jpg" alt="foto1"/><p>Asperge met wortels in kip boulion</p></a></li>
-		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/vegterian/2.jpg" alt="foto2"/><p>Indonesiche ontbijt</p></a></li>
-		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/vegterian/3.jpg" alt="foto3"/><p>Indianse basmati rijst met koriander en feta kaas</p></a></li>
-		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/vegterian/4.jpg" alt="foto4"/><p>Malesianse hoofd gericht</p></a></li>
-	        <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/vegterian/5.jpg" alt="foto5"/><p>Nederlandse groenten mix</p></a></li>
-		
-		</ul>
-  		
-  	</div>
-  	
-  	
-  <footer data-role="footer" data-position="fixed">
-  <nav data-role="navbar">
-	 <ul id="tab-bar">
-   <li>
-       <a href="#"  data-icon="info">Locatie</a>
-    </li>
- 
-    <li>
-          <a href="#" data-icon="camera">Camera</a>
-    </li>
- 
-    <li>
-       <a href="#"  data-icon="gear">Toestel</a>
-    </li>
-    </ul>
-	</nav>
-      </footer>
-	  </div>
-	  
-	  
-	  
-	  
-	   <div data-role="page" id="planning" data-theme="b">
+	  <div data-role="page" id="planning">
+	 
   	<header data-role="header">
   		<h1>Planning</h1>
 		<a href="#page" data-icon="home">Home</a>
@@ -304,8 +143,7 @@ for(var i=0;i< myArray.length;i++)
   		<ul data-role="listview" data-filter="true" data-inset="true">
 		 <li><a href"#">Vandaag</a></li>
 		 <li><a href"#">Week</a></li>
-		  <li><a href"#">Maand</a></li>
-		
+		  <li><a href"#">Maand</a></li>		
 		</ul>
   	</div>
   	
