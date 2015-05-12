@@ -131,7 +131,7 @@ for(var i=0;i< myArray.length;i++)
 	  </div>
 	  
 	  
-	  <div data-role="page" id="planning">
+	  <div data-role="page" id="planning" data-theme="b">>
 	 
   	<header data-role="header">
   		<h1>Planning</h1>
@@ -151,8 +151,6 @@ for(var i=0;i< myArray.length;i++)
   <footer data-role="footer" data-position="fixed">
   <nav data-role="navbar">
 	 <ul>
-   
-	
 	 <li>
        <a href="#"  data-icon="info">Overzicht</a>
     </li>
@@ -161,6 +159,44 @@ for(var i=0;i< myArray.length;i++)
           <a href="#" data-icon="grid">Gepland</a>
     </li>   
  
+    </ul>
+	</nav>
+      </footer>
+	  </div>
+	  
+	   <div data-role="page" id="Fastfood" data-theme="a">
+  	<header data-role="header">
+  		<h1>Fast food</h1>
+		<a href="#page" data-icon="home">Home</a>
+		<a href="#planing" data-icon="grid">Planning</a>
+  	</header>
+	
+  	<div id="inhoudfastfood" data-role="content">
+  		<ul data-role="listview" data-filter="true" data-inset="true">
+		 <li><a href="#foto1"><h1>Foto een</h1><img  src="images/fastFood/1.jpg" alt="foto1"/><p>Lekker hamburger met uien en kaas</p></a></li>
+		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/fastFood/2.jpg" alt="foto2"/><p>Lekker kipburger met ui, friet en sla</p></a></li>
+		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/fastFood/3.jpg" alt="foto3"/><p>Pizza vegi met olijven, paprika en uien</p></a></li>
+		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/fastFood/4.jpg" alt="foto4"/><p>Kip vleugels met sla en friet</p></a></li>
+	         <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/fastFood/5.jpg" alt="foto5"/></a><p>Broodje donor</p></li>
+
+		</ul>
+  	</div>
+  	
+  	
+  <footer data-role="footer" data-position="fixed">
+  <nav data-role="navbar">
+	 <ul id="tab-bar">
+    <li>
+       <a href="#locatieGedeelte"  data-icon="info">Locatie</a>
+    </li>
+ 
+    <li>
+          <a href="#cameraGedeelte" data-icon="camera">Camera</a>
+    </li>
+ 
+    <li>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
+    </li>
     </ul>
 	</nav>
       </footer>
