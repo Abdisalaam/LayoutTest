@@ -10,11 +10,10 @@
 	 <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
 	  <title>Eten app</title>
 
-            <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-	 
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
 	   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
 	    <script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
-	     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
 
     <script type="text/javascript" charset="utf-8">
     var pictureSource; 
@@ -105,7 +104,7 @@ for(var i=0;i< myArray.length;i++)
   	</header>
 	
        	<div data-role="content">
-  		<ul id="inhoud" data-role="listview" data-inset="true" data-filter="true">
+  		<ul id="inhoud" data-role="listview" data-filter="true" data-inset="true">
   			
   			
   		</ul>
@@ -180,7 +179,7 @@ for(var i=0;i< myArray.length;i++)
   	</header>
 	
   	<div id="inhoudseafood" data-role="content">
-  		<ul data-role="listview" data-inset="true" data-filter="true">
+  		<ul data-role="listview" data-filter="true" data-inset="true">
 		 <li><a href="#foto1"> <h1>Foto een</h1><img src="images/seaFood/1.jpg" alt="foto1"/><p>Reuze garnalen met koriander</p></a></li>
 		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/seaFood/2.jpg" alt="foto1"/><p>Maxicanse sea coctail</p></a></li>
 		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/seaFood/3.jpg" alt="foto1"/><p>Lekker gemengde zee vruchten</p></a></li>
@@ -377,7 +376,10 @@ for(var i=0;i< myArray.length;i++)
   	</header>
 	
   	<div id="inhoudCamera" data-role="content">
-  	<button onclick="maakFoto();"> maak foto</button>
+  		<script>
+  			maakFoto();
+  			
+  		</script>
 	
        <div id ="fotoPlaats">
        <img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
