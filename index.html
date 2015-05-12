@@ -31,7 +31,7 @@
 
 for(var i=0;i< myArray.length;i++)
 {
-  html += '<li id='+ i +'>' + '<a href="#'+myArray[i]+'">'+ '<h1> '+ myArray[i] + '</h1>' + '<img src="' + myImages[i] + '" alt= "' + myArray[i] +'" /> <p>' + mydiscription[i]+' </p> </li> </a>';
+  html += '<li id='+ i +'>' + '<a href="#'+myArray[i]+'">'+ '<h1> '+ myArray[i] + '</h1>' + '<img src="' + myImages[i] + '" alt= "' + myArray[i] +'" /> <p>' + mydiscription[i]+' </p></a></li> ';
 
 }
   html += "</ul>";
@@ -106,6 +106,7 @@ for(var i=0;i< myArray.length;i++)
   		<h1>Soorten</h1>
 		
 		<a href="#planning" data-icon="grid">Planning</a>
+		<a href="#" data-icon="plus">Meer</a>
   	</header>
 	
   	<div id="inhoud" data-role="content">
@@ -125,7 +126,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
@@ -176,7 +177,7 @@ for(var i=0;i< myArray.length;i++)
 	  
 	  
 	  
-	  	   <div data-role="page" id="seafoodfood">
+	  	   <div data-role="page" id="Seafood">
   	<header data-role="header">
   		<h1>Sea food</h1>
 		<a href="#page" data-icon="home">Home</a>
@@ -248,7 +249,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
@@ -261,7 +262,7 @@ for(var i=0;i< myArray.length;i++)
   	<header data-role="header">
   		<h1>Vegiteraian </h1>
 		<a href="#page" data-icon="home">Home</a>
-		<a href="#planing" data-icon="grid">Planning</a>
+		<a href="#planning" data-icon="grid">Planning</a>
 		</header>
 	
   	<div id="inhoudVeg" data-role="content">
@@ -290,7 +291,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
@@ -304,7 +305,7 @@ for(var i=0;i< myArray.length;i++)
   	<header data-role="header">
   		<h1>Planning</h1>
 		<a href="#page" data-icon="home">Home</a>
-		
+	     <a href="#" data-icon="plus">Meer</a>
 		</header>
 	
   	<div id="inhoudplannig" data-role="content">
@@ -327,7 +328,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-          <a href="#" data-icon="camera">Gepland</a>
+          <a href="#" data-icon="grid">Gepland</a>
     </li>   
  
     </ul>
@@ -340,6 +341,7 @@ for(var i=0;i< myArray.length;i++)
   		<h1>Locatie</h1>
 		
 		<a href="#page" data-icon="home">Home</a>
+	  <a href="#planning" data-icon="grid">Plannig</a>
   	</header>
 	
   	<div id="inhoudLocal" data-role="content">
@@ -364,7 +366,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
@@ -376,6 +378,7 @@ for(var i=0;i< myArray.length;i++)
   		<h1>Camera</h1>
 		
 		<a href="#page" data-icon="home">Home</a>
+			<a href="#planning" data-icon="home">Planning</a>
   	</header>
 	
   	<div id="inhoudCamera" data-role="content">
@@ -403,7 +406,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
@@ -415,6 +418,7 @@ for(var i=0;i< myArray.length;i++)
   		<h1>Toestel</h1>
 		
 		<a href="#page" data-icon="home">Home</a>
+			<a href="#planning" data-icon="grid">Home</a>
   	</header>
 	
   	<div id="inhoudToestel" data-role="content">
@@ -441,7 +445,7 @@ for(var i=0;i< myArray.length;i++)
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="device">Toestel</a>
+       <a href="#toestelGedeelte"  data-icon="gear">Toestel</a>
     </li>
     </ul>
 	</nav>
