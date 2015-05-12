@@ -27,14 +27,14 @@
 		    var mydiscription = ["Is niet gezond maar wel lekker", "heel gezond en lekker", "zit vol met vitaminen", "heel gezond maar niet lekker"];
 		
 		 
-  var html = "<ul data-role= "listview" data-filter="true">";
+  var html = "";
 
 for(var i=0;i< myArray.length;i++)
 {
-  html += '<li id='+ i +'>' + '<a href="#'+myArray[i]+'">'+ '<h1> '+ myArray[i] + '</h1>' + '<img src="' + myImages[i] + '" alt= "' + myArray[i] +'" /> <p>' + mydiscription[i]+' </p></a></li> ';
+  html = '<li id='+ i +'>' + '<a href="#'+myArray[i]+'">'+ '<h1> '+ myArray[i] + '</h1>' + '<img src="' + myImages[i] + '" alt= "' + myArray[i] +'" /> <p>' + mydiscription[i]+' </p></a></li> ';
 
 }
-  html += "</ul>";
+ 
    var res = document.getElementById('inhoud');
    
   res.innerHTML = html;
@@ -109,8 +109,11 @@ for(var i=0;i< myArray.length;i++)
 		<a href="#" data-icon="plus">Meer</a>
   	</header>
 	
-  	<div id="inhoud" data-role="content">
-  		
+  	<div  data-role="content">
+  		<ul id="inhoud" data-role= "listview" data-filter="true">
+  			
+  			
+  		</ul>
 	
   	</div>
  
