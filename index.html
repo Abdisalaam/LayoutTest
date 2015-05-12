@@ -97,7 +97,7 @@ for(var i=0;i< myArray.length;i++)
   <body>
   
   
-  <div data-role="page" id="page" data-theme="a">
+          <div data-role="page" id="page" data-theme="a">
   	<div>
   		<header data-role="header">
   		<h1>Food</h1>
@@ -106,15 +106,7 @@ for(var i=0;i< myArray.length;i++)
   	<header data-role="header">
   		<h1>Soorten</h1>
 		<a href="#planning" data-icon="grid">Planning</a>
-		<a data-role="collapsible" data-icon="bullets">
-	        <ul data-role="listview"  data-shadow="false" data-inset="true">
-               <li><a href="#">Bel</a></li>
-                 <li><a href="#">Mail</a></li>
-               <li><a href="#">Contacten</a></li>
-                </ul>
-			Meer</a>
-	
-			
+		<a href="#planning" data-icon="bullets">Meer</a>
 		</ul>
 	
   	</header>
@@ -143,7 +135,6 @@ for(var i=0;i< myArray.length;i++)
 	</nav>
       </footer>
 	  </div>
-	  
 	  
 	  <div data-role="page" id="planning" data-theme="b">>
 	 
@@ -180,14 +171,14 @@ for(var i=0;i< myArray.length;i++)
       </footer>
 	  </div>
 	  
-	   <div data-role="page" id="Fastfood" data-theme="b">
+	  <div data-role="page" id="Fastfood" data-theme="b">
   	<header data-role="header">
   		<h1>Fast food</h1>
 		<a href="#page" data-icon="home">Home</a>
 		<a href="#planning" data-icon="grid">Planning</a>
   	</header>
 	
-  	<div id="inhoudfastfood">
+  	<div id="inhoudfastfood" data-role="content">
   		<ul data-role="listview" data-filter="true" data-inset="true">
 		 <li><a href="#foto1"><img  src="images/fastFood/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
 		 <li><a href="#foto2"><img src="images/fastFood/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
@@ -217,9 +208,7 @@ for(var i=0;i< myArray.length;i++)
       </footer>
 	  </div>
 	  
-	  
-	  
-<div data-role="page" id="Seafood" data-theme="a">
+          <div data-role="page" id="Seafood" data-theme="a">
   	<header data-role="header">
   		<h1>Sea food</h1>
 		<a href="#page" data-icon="home">Home</a>
@@ -250,6 +239,80 @@ for(var i=0;i< myArray.length;i++)
  
     <li>
        <a href="#"  data-icon="gear">Toestel</a>
+    </li>
+    </ul>
+	</nav>
+      </footer>
+	  </div>
+	  
+	  <div data-role="page" id="Fruit" data-theme="a">
+  	<header data-role="header">
+  		<h1>Fruit</h1>
+		<a href="#page" data-icon="home">Home</a>
+		<a href="#" data-icon="shop">Koop</a>
+  	</header>
+	
+  	<div id="inhoudfastfood" data-role="content">
+  		<ul data-role="listview" data-filter="true" data-inset="true">
+		 <li><a href="#foto1"><img  src="images/fruit/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
+		 <li><a href="#foto2"><img src="images/fruit/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
+		 <li><a href="#foto3"><img src="images/fruit/3.jpg" alt="foto3"/>Pizza vegi met olijven, paprika en uien</a></li>
+		 <li><a href="#foto4"><img src="images/fruit/4.jpg" alt="foto4"/>Kip vleugels met sla en friet</a></li>
+	         <li><a href="#foto5"><img src="images/fruit/5.jpg" alt="foto5"/>Broodje donor</a></li>
+		</ul>
+  	</div>
+  	
+  	
+  <footer data-role="footer" data-position="fixed">
+  <nav data-role="navbar">
+	 <ul id="tab-bar">
+    <li>
+       <a href="#locatieGedeelte"  data-icon="action">Save</a>
+    </li>
+ 
+    <li>
+          <a href="#cameraGedeelte" data-icon="mail">Mailen</a>
+    </li>
+ 
+    <li>
+       <a href="#toestelGedeelte"  data-icon="user">Gebruiker</a>
+    </li>
+    </ul>
+	</nav>
+      </footer>
+	  </div>
+	  
+	   <div data-role="page" id="Veg" data-theme="a">
+  	<header data-role="header">
+  		<h1>Vegetarisch</h1>
+		<a href="#page" data-icon="home">Home</a>
+		<a href="#" data-icon="shop">Koop</a>
+  	</header>
+	
+  	<div id="inhoudfastfood" data-role="content">
+  		<ul data-role="listview" data-filter="true" data-inset="true">
+		 <li><a href="#foto1"><img src="images/vegterian/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
+		 <li><a href="#foto2"><img src="images/vegterian/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
+		 <li><a href="#foto3"><img src="images/vegterian/3.jpg" alt="foto3"/>Pizza vegi met olijven, paprika en uien</a></li>
+		 <li><a href="#foto4"><img src="images/vegterian/4.jpg" alt="foto4"/>Kip vleugels met sla en friet</a></li>
+	         <li><a href="#foto5"><img src="images/vegterian/5.jpg" alt="foto5"/>Broodje donor</a></li>
+		</ul>
+  	</div>
+  	
+  	
+  <footer data-role="footer" data-position="fixed">
+  <nav data-role="navbar">
+	 <ul id="tab-bar">
+    <li>
+       <a href="#locatieGedeelte"  data-icon="action">Save</a>
+    </li>
+ 
+    <li>
+          <a href="#cameraGedeelte" data-icon="mail">Mailen</a>
+    </li>
+ 
+    <li>
+       <a href="#toestelGedeelte"  data-icon="user">Gebruiker</a>
     </li>
     </ul>
 	</nav>
