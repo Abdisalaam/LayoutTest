@@ -376,23 +376,19 @@ for(var i=0;i< myArray.length;i++)
       </footer>
 	  </div>
 	  
-	  <div data-role="page" id="cameraGedeelte" data-theme="a">
+	  <div data-role="page" id="cameraGedeelte" data-theme="a" onload=" maakFoto();">
   	<header data-role="header">
   		<h1>Camera</h1>
 		
 		<a href="#page" data-icon="home">Home</a>
-			<a href="#planning" data-icon="home">Planning</a>
+		<a href="#planning" data-icon="home">Planning</a>
   	</header>
 	
   	<div id="inhoudCamera" data-role="content">
   		
-		<script>
-		 maakFoto();
-
-		</script>
-		
-		<div id ="fotoPlaats">
-  		 <img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
+	
+       <div id ="fotoPlaats">
+       <img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
   	</div>
   	</div>
   	
