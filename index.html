@@ -63,7 +63,7 @@ for(var i=0;i< myArray.length;i++)
 
     }
     function maakFoto() {
-      var test =   navigator.camera.getPicture(bijSucces, bijFalen, { quality: 20,
+       navigator.camera.getPicture(bijSucces, bijFalen, { quality: 20,
                    destinationType: Camera.DestinationType.DATA_URL});
     }
     function bijFalen(message) {
@@ -385,7 +385,10 @@ for(var i=0;i< myArray.length;i++)
   	</header>
 	
   	<div id="inhoudCamera" data-role="content">
-  		
+  		<script>
+  			maakFoto();
+  			
+  		</script>
 	
        <div id ="fotoPlaats">
        <img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
