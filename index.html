@@ -14,7 +14,22 @@
 		<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
 	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
 	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
-           	<link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		
+		<script type="text/javascript">
+		
+			function submitForm() {
+			var userName = $('[name="firstName"]').val();
+			var userEmail = $('[name="email"]').val();
+			
+			   var res = document.getElementById('listUsers');
+			   res.innerHTML += '<li><a href="#">'+ userName + ' And email is:' + userEmail +'</a></li>';
+			
+			   $.mobile.changePage( "#users", {reverse: false, transition: "slide"});
+			 return false;
+			}
+		
+		</script>
  </head>
   <body>
   
@@ -43,8 +58,8 @@
   			
   		</ul>
 	
-  	</div>
- 
+  	    </div>
+ <div>
   <footer data-role="footer" data-position="fixed">
   <nav data-role="navbar">
 	 <ul>
@@ -62,35 +77,36 @@
     </ul>
 	</nav>
       </footer>
+ </div>
 	  </div>
 	  
-	  <div data-role="page" id="users" data-theme="b">>
+	  <div data-role="page" id="users" data-theme="b">
 	 
   	<header data-role="header">
   		
   		<h1>Users</h1>
 		<a href="#page" data-icon="home">Home</a>
-	     <a href="#" data-icon="plus">More</a>
+	     <a href="#inputuserpage" data-icon="plus">New</a>
 		</header>
 	
   	<div id="inhoudusers" data-role="content">
-  		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href"#">Ali</a></li>
-		 <li><a href"#">Mahmuud</a></li>
-		  <li><a href"#">Qasim</a></li>
-		   <li><a href"#">Abdu</a></li>	
-		   <li><a href"#">Hanna</a></li>
-		 <li><a href"#">Loosi</a></li>
-		  <li><a href"#">Jon</a></li>
-		   <li><a href"#">Mohammed</a></li>	
-		   <li><a href"#">Layla</a></li>
-		 <li><a href"#">Joury</a></li>
-		  <li><a href"#">Yahya</a></li>
-		   <li><a href"#">Naser</a></li>	
-		   <li><a href"#">Kader</a></li>
-		 <li><a href"#">Hamuudi</a></li>
-		  <li><a href"#">Abdu-razaq</a></li>
-		   <li><a href"#">Maha</a></li>	
+  		<ul id="listUsers" data-role="listview" data-filter="true" data-inset="true">
+		 <li><a href="#">Ali</a></li>
+		 <li><a href="#">Mahmuud</a></li>
+		  <li><a href="#">Qasim</a></li>
+		   <li><a href="#">Abdu</a></li>	
+		   <li><a href="#">Hanna</a></li>
+		 <li><a href="#">Loosi</a></li>
+		  <li><a href="#">Jon</a></li>
+		   <li><a href="#">Mohammed</a></li>	
+		   <li><a href="#">Layla</a></li>
+		 <li><a href="#">Joury</a></li>
+		  <li><a href="#">Yahya</a></li>
+		   <li><a href="#">Naser</a></li>	
+		   <li><a href="#">Kader</a></li>
+		 <li><a href="#">Hamuudi</a></li>
+		  <li><a href="#">Abdu-razaq</a></li>
+		   <li><a href="#">Maha</a></li>	
 		</ul>
   	</div>
   	
@@ -270,7 +286,7 @@
   	<header data-role="header">
   		<h1>List view test</h1>
 		<a href="#page" data-icon="home">Home</a>
-		<a href="#" data-icon="shop">Koop</a>
+		<a href="#" data-icon="shop">Shopping</a>
   	</header>
 	
   	<div id="inhoudfastfood" data-role="content">
@@ -316,6 +332,34 @@
 	</nav>
       </footer>
 	  </div>
+	      <div data-role="page" id="inputuserpage" data-theme="a">
+  	<div>
+  		<header  data-role="header">
+  		<h3><a href="#Veg">Nas</a></h3>
+		
+  	</header>
+  	<header data-role="header">
+  		<h1>New user</h1>
+		<a href="#users" data-icon="cancel">Cancel</a>
+		<a href="#users" data-icon="plus">Save</a>
+		</ul>
+	
+  	</header>
+		<div data-role="content">
+  		<form method="POST" onsubmit="return submitForm()" data-ajax="false">
+		<input name="firstName" type="text" placeholder="First name">
+		<input name="lastName" type="text" placeholder="Last name">
+		<input name="email" type="text" placeholder="Email">
+		<input name="address" type="text" placeholder="Address">
+		<input name="phoneNr" type="text" placeholder="Phone nr">
+		<input type="submit" value="Submit">
+		</form>
+	
+  	</div>
+	</div>
+       
+ 
+   </div>
 	  
 	  
 	  
