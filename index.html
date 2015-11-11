@@ -7,14 +7,14 @@
 
      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1, maximum-scale=1"/>
 
-	 <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
-	  <title>Eten app</title>
-
-           <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-		    <script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
-			  <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
-	   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
 	 
+	  <title>Nas consulting</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	  
 
     <script type="text/javascript" charset="utf-8">
@@ -24,8 +24,8 @@
     function onDeviceReady() {
         pictureSource = navigator.camera.PictureSourceType;
         destinationType = navigator.camera.DestinationType;
-         var myArray = ["Fastfood", "Fruit", "Seafood", "Veg"];
-		  var myImages = ["images/Fastfood.jpg", "images/Fruit.jpg", "images/Seafood.jpg", "images/Veg.jpg"];
+         var myArray = ["orders", "users", "product", "history"];
+		  var myImages = ["images/orders.png", "images/customers.png", "images/product.png", "images/history.png"];
 		    var mydiscription = ["Is niet gezond maar wel lekker", "heel gezond en lekker", "zit vol met vitaminen", "heel gezond maar niet lekker"];
 		
 		 
@@ -99,14 +99,14 @@ for(var i=0;i< myArray.length;i++)
   
           <div data-role="page" id="page" data-theme="a">
   	<div>
-  		<header data-role="header">
-  		<h1>Food</h1>
+  		<header  data-role="header">
+  		<h1><a href="#Veg"><img src="icon.png" alt="Nasser" height="42" width="42"></a> Nas consulting</h1>
 		
   	</header>
   	<header data-role="header">
-  		<h1>Soorten</h1>
-		<a href="#planning" data-icon="grid">Planning</a>
-		<a href="#planning" data-icon="bullets">Meer</a>
+  		<h1>Order application</h1>
+		<a href="#orders" data-icon="grid">Orders</a>
+		<a href="#users" data-icon="bullets">Users</a>
 		</ul>
 	
   	</header>
@@ -121,36 +121,48 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul>
     <li>
-       <a href="#"  data-icon="location">Locatie</a>
+       <a href="#Veg"  data-icon="location">Location</a>
     </li>
  
     <li>
-          <a href="#" data-icon="camera">Camera</a>
+          <a href="#Veg" data-icon="camera">Camera</a>
     </li>
  
     <li>
-       <a href="#"  data-icon="info">Info</a>
+       <a href="#Veg"  data-icon="info">Info</a>
     </li>
     </ul>
 	</nav>
       </footer>
 	  </div>
 	  
-	  <div data-role="page" id="planning" data-theme="b">>
+	  <div data-role="page" id="users" data-theme="b">>
 	 
   	<header data-role="header">
   		
-  		<h1>Planning</h1>
+  		<h1>Users</h1>
 		<a href="#page" data-icon="home">Home</a>
-	     <a href="#" data-icon="plus">Meer</a>
+	     <a href="#" data-icon="plus">More</a>
 		</header>
 	
-  	<div id="inhoudplannig" data-role="content">
+  	<div id="inhoudusers" data-role="content">
   		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href"#">Vandaag</a></li>
-		 <li><a href"#">Week</a></li>
-		  <li><a href"#">Maand</a></li>
-		   <li><a href"#">Jaar</a></li>	
+		 <li><a href"#">Ali</a></li>
+		 <li><a href"#">Mahmuud</a></li>
+		  <li><a href"#">Qasim</a></li>
+		   <li><a href"#">Abdu</a></li>	
+		   <li><a href"#">Hanna</a></li>
+		 <li><a href"#">Loosi</a></li>
+		  <li><a href"#">Jon</a></li>
+		   <li><a href"#">Mohammed</a></li>	
+		   <li><a href"#">Layla</a></li>
+		 <li><a href"#">Joury</a></li>
+		  <li><a href"#">Yahya</a></li>
+		   <li><a href"#">Naser</a></li>	
+		   <li><a href"#">Kader</a></li>
+		 <li><a href"#">Hamuudi</a></li>
+		  <li><a href"#">Abdu-razaq</a></li>
+		   <li><a href"#">Maha</a></li>	
 		</ul>
   	</div>
   	
@@ -159,11 +171,11 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul>
 	 <li>
-       <a href="#"  data-icon="info">Overzicht</a>
+       <a href="#"  data-icon="info">Details</a>
     </li>
  
     <li>
-          <a href="#" data-icon="grid">Gepland</a>
+          <a href="#" data-icon="grid">List</a>
     </li>   
  
     </ul>
@@ -171,20 +183,35 @@ for(var i=0;i< myArray.length;i++)
       </footer>
 	  </div>
 	  
-	  <div data-role="page" id="Fastfood" data-theme="b">
+	  <div data-role="page" id="orders" data-theme="b">
   	<header data-role="header">
-  		<h1>Fast food</h1>
+  		<h1>Orders</h1>
 		<a href="#page" data-icon="home">Home</a>
-		<a href="#planning" data-icon="grid">Planning</a>
+		<a href="#planning" data-icon="grid">Details</a>
   	</header>
 	
-  	<div id="inhoudfastfood" data-role="content">
+  	<div id="inhoudOrders" data-role="content">
   		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"><img  src="images/fastFood/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
-		 <li><a href="#foto2"><img src="images/fastFood/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
-		 <li><a href="#foto3"><img src="images/fastFood/3.jpg" alt="foto3"/>Pizza vegi met olijven, paprika en uien</a></li>
-		 <li><a href="#foto4"><img src="images/fastFood/4.jpg" alt="foto4"/>Kip vleugels met sla en friet</a></li>
-	         <li><a href="#foto5"><img src="images/fastFood/5.jpg" alt="foto5"/>Broodje donor</a></li>
+		 <li><a href="#order1">Order1</a></li>
+		 <li><a href="#order2">Order2</a></li>
+		 <li><a href="#order3">Order3</a></li>
+		 <li><a href="#order4">Order4</a></li>
+	     <li><a href="#order5">Order5</a></li>
+		 <li><a href="#order1">Order6</a></li>
+		 <li><a href="#order2">Order7</a></li>
+		 <li><a href="#order3">Order8</a></li>
+		 <li><a href="#order4">Order9</a></li>
+	     <li><a href="#order5">Order10</a></li>
+		 <li><a href="#order1">Order11</a></li>
+		 <li><a href="#order2">Order12</a></li>
+		 <li><a href="#order3">Order13</a></li>
+		 <li><a href="#order4">Order14</a></li>
+	     <li><a href="#order5">Order15</a></li>
+		 <li><a href="#order1">Order16</a></li>
+		 <li><a href="#order2">Order17</a></li>
+		 <li><a href="#order3">Order18</a></li>
+		 <li><a href="#order4">Order19</a></li>
+	     <li><a href="#order5">Order20</a></li>
 		</ul>
   	</div>
   	
@@ -193,35 +220,35 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul id="tab-bar">
     <li>
-       <a href="#locatieGedeelte"  data-icon="action">Save</a>
+       <a href="#locatieGedeelte"  data-icon="action">Action1</a>
     </li>
  
     <li>
-          <a href="#cameraGedeelte" data-icon="mail">Mailen</a>
+          <a href="#cameraGedeelte" data-icon="mail">Action2</a>
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="user">Gebruiker</a>
+       <a href="#toestelGedeelte"  data-icon="user">Action3</a>
     </li>
     </ul>
 	</nav>
       </footer>
 	  </div>
 	  
-          <div data-role="page" id="Seafood" data-theme="a">
+          <div data-role="page" id="product" data-theme="a">
   	<header data-role="header">
-  		<h1>Sea food</h1>
+  		<h1>Items</h1>
 		<a href="#page" data-icon="home">Home</a>
-		<a href="#planning" data-icon="grid">Planning</a>
+		<a href="#orders" data-icon="grid">Orders</a>
   	</header>
 	
-  	<div id="inhoudseafood" data-role="content">
+  	<div id="inhoudProduct" data-role="content">
   		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"> <h1>Foto een</h1><img src="images/seaFood/1.jpg" alt="foto1"/><p>Reuze garnalen met koriander</p></a></li>
-		 <li><a href="#foto2"><h1>Foto twee</h1><img src="images/seaFood/2.jpg" alt="foto1"/><p>Maxicanse sea coctail</p></a></li>
-		 <li><a href="#foto3"><h1>Foto drie</h1><img src="images/seaFood/3.jpg" alt="foto1"/><p>Lekker gemengde zee vruchten</p></a></li>
-		 <li><a href="#foto4"><h1>Foto vier</h1><img src="images/seaFood/4.jpg" alt="foto1"/><p>Lekker Taaise garnalen met uien en kaas</p></a></li>
-	         <li><a href="#foto5"><h1>Foto vijf</h1><img src="images/seaFood/5.jpg" alt="foto1"/><p>Lekker gegraild Taaise garnalen met uien en tomaten</p></a></li>
+		 <li><a href="#foto1"><h1>Product 1</h1><img src="images/seaFood /1.jpg" alt="foto1"/><p>Its cheap </p></a></li>
+		 <li><a href="#foto2"><h1>Product 2</h1><img src="images/seaFood /2.jpg" alt="foto1"/><p>Cool</p></a></li>
+		 <li><a href="#foto3"><h1>Product 3</h1><img src="images/seaFood /3.jpg" alt="foto1"/><p>Nice</p></a></li>
+		 <li><a href="#foto4"><h1>Product 4</h1><img src="images/seaFood /4.jpg" alt="foto1"/><p>Dont buy it</p></a></li>
+	     <li><a href="#foto5"><h1>Product 5</h1><img src="images/seaFood /5.jpg" alt="foto1"/><p>Get more of this</p></a></li>
 		</ul>
   	</div>
   	
@@ -230,36 +257,85 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul id="tab-bar">
      <li>
-       <a href="#"  data-icon="info">Locatie</a>
+       <a href="#"  data-icon="action">New</a>
     </li>
- 
-    <li>
-          <a href="#" data-icon="camera">Camera</a>
+	 <li>
+       <a href="#"  data-icon="delete">Delete</a>
     </li>
- 
-    <li>
-       <a href="#"  data-icon="gear">Toestel</a>
+	 <li>
+       <a href="#"  data-icon="cancel">Edit</a>
     </li>
+  
     </ul>
 	</nav>
       </footer>
 	  </div>
 	  
-	  <div data-role="page" id="Fruit" data-theme="a">
+	  <div data-role="page" id="history" data-theme="a">
   	<header data-role="header">
-  		<h1>Fruit</h1>
+  		<h1>History</h1>
 		<a href="#page" data-icon="home">Home</a>
-		<a href="#" data-icon="shop">Koop</a>
+		<a href="#" data-icon="shop">Shop</a>
   	</header>
 	
   	<div id="inhoudfastfood" data-role="content">
-  		<ul data-role="listview" data-filter="true" data-inset="true">
-		 <li><a href="#foto1"><img  src="images/fruit/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
-		 <li><a href="#foto2"><img src="images/fruit/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
-		 <li><a href="#foto3"><img src="images/fruit/3.jpg" alt="foto3"/>Pizza vegi met olijven, paprika en uien</a></li>
-		 <li><a href="#foto4"><img src="images/fruit/4.jpg" alt="foto4"/>Kip vleugels met sla en friet</a></li>
-	         <li><a href="#foto5"><img src="images/fruit/5.jpg" alt="foto5"/>Broodje donor</a></li>
-		</ul>
+  <table data-role="table" data-mode="reflow">
+  <tr>
+    <th>Order id</th>
+    <th>Costumer</th>
+	<th>Product</th>
+	<th>Date</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Ali</td>
+	 <td>Mazda</td>
+    <td>12-05-2015</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Maha</td>
+	 <td>Nissan</td>
+    <td>12-05-2013</td>
+  </tr>
+   <tr>
+    <td>3</td>
+    <td>Ali</td>
+	 <td>Mazda</td>
+    <td>12-05-2015</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Maha</td>
+	 <td>Nissan</td>
+    <td>12-05-2013</td>
+  </tr>
+   <tr>
+    <td>5</td>
+    <td>Ali</td>
+	 <td>GMC</td>
+    <td>12-05-2015</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Maha</td>
+	 <td>Nissan</td>
+    <td>12-05-2011</td>
+  </tr>
+  
+   <tr>
+    <td>7</td>
+    <td>Ali</td>
+	 <td>Mazda</td>
+    <td>12-05-2010</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Maha</td>
+	 <td>Toyota</td>
+    <td>12-05-2013</td>
+  </tr>
+</table>
   	</div>
   	
   	
@@ -267,15 +343,15 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul id="tab-bar">
     <li>
-       <a href="#locatieGedeelte"  data-icon="action">Save</a>
+       <a href="#Veg"  data-icon="action">Action1</a>
     </li>
  
     <li>
-          <a href="#cameraGedeelte" data-icon="mail">Mailen</a>
+          <a href="#Veg" data-icon="mail">Action2</a>
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="user">Gebruiker</a>
+       <a href="#"  data-icon="user">Action3</a>
     </li>
     </ul>
 	</nav>
@@ -284,30 +360,30 @@ for(var i=0;i< myArray.length;i++)
 	  
 	   <div data-role="page" id="Veg" data-theme="a">
   	<header data-role="header">
-  		<h1>Vegetarisch</h1>
+  		<h1>List view test</h1>
 		<a href="#page" data-icon="home">Home</a>
 		<a href="#" data-icon="shop">Koop</a>
   	</header>
 	
   	<div id="inhoudfastfood" data-role="content">
   		<ul data-role="listview" data-inset="true">
-		<li data-role="collapsible" data-iconpos="right" data-corners="false" data-shadow="false">
-    <h2>Aziatisch fruit</h2>
+		<li data-role="collapsible" data-iconpos="right" data-corners="false" data-shadow="true">
+    <h2>Order Detail</h2>
     <ul data-role="listview" data-corners="false" data-shadow="false" data-inset="true">
-      <li><a href="#">Pando fruit</a></li>
-      <li><a href="#">Eagle fruit</a></li>
-       <li><a href="#">Chan sun fruit</a></li>
+      <li><a href="#">Test 1</a></li>
+      <li><a href="#">Test 2</a></li>
+       <li><a href="#">Test 3</a></li>
     </ul>
   </li>
-  <li><a href="#">Africanse fruit</a></li>
+  <li><a href="#">Food Items 1</a></li>
   <li data-role="collapsible" data-iconpos="right" data-corners="false" data-shadow="false">
-    <h2>Latijnse fruit</h2>
+    <h2>Food Items 2</h2>
     <ul data-role="listview" data-corners="false" data-shadow="false" data-inset="true">
-      <li><a href="#foto1"><img  src="images/vegterian/1.jpg" alt="foto1"/>Lekker hamburger met uien en kaas</a></li>
-		 <li><a href="#foto2"><img src="images/vegterian/2.jpg" alt="foto2"/>Lekker kipburger met ui, friet en sla</a></li>
-		 <li><a href="#foto3"><img src="images/vegterian/3.jpg" alt="foto3"/>Pizza vegi met olijven, paprika en uien</a></li>
-		 <li><a href="#foto4"><img src="images/vegterian/4.jpg" alt="foto4"/>Kip vleugels met sla en friet</a></li>
-	         <li><a href="#foto5"><img src="images/vegterian/5.jpg" alt="foto5"/>Broodje donor</a></li>
+      <li><a href="#foto1"><img  src="images/vegterian/1.jpg" alt="foto1"/>Good</a></li>
+		 <li><a href="#foto2"><img src="images/vegterian/2.jpg" alt="foto2"/>Good choice</a></li>
+		 <li><a href="#foto3"><img src="images/vegterian/3.jpg" alt="foto3"/>Not bad</a></li>
+		 <li><a href="#foto4"><img src="images/vegterian/4.jpg" alt="foto4"/>I like it</a></li>
+	     <li><a href="#foto5"><img src="images/vegterian/5.jpg" alt="foto5"/>Buy Shawrma</a></li>
     </ul>
   </li>
  </ul>
@@ -318,15 +394,15 @@ for(var i=0;i< myArray.length;i++)
   <nav data-role="navbar">
 	 <ul id="tab-bar">
     <li>
-       <a href="#locatieGedeelte"  data-icon="action">Save</a>
+       <a href="#"  data-icon="action">Save</a>
     </li>
  
     <li>
-          <a href="#cameraGedeelte" data-icon="mail">Mailen</a>
+          <a href="#" data-icon="mail">Mailen</a>
     </li>
  
     <li>
-       <a href="#toestelGedeelte"  data-icon="user">Gebruiker</a>
+       <a href="#"  data-icon="user">Gebruiker</a>
     </li>
     </ul>
 	</nav>
