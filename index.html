@@ -14,85 +14,7 @@
 		<script type="text/javascript" charset="utf-8" src="js/jquery-2.1.1.min.js"></script>
 	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.js"></script>
 	    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.5.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-	  
-
-    <script type="text/javascript" charset="utf-8">
-    var pictureSource; 
-    var destinationType; 
-    document.addEventListener("deviceready",onDeviceReady,false);
-    function onDeviceReady() {
-        pictureSource = navigator.camera.PictureSourceType;
-        destinationType = navigator.camera.DestinationType;
-         var myArray = ["orders", "users", "product", "history"];
-		  var myImages = ["images/Fastfood.jpg", "images/Fruit.jpg", "images/Seafood.jpg", "images/Veg.jpg"];
-		    var mydiscription = ["Is niet gezond maar wel lekker", "heel gezond en lekker", "zit vol met vitaminen", "heel gezond maar niet lekker"];
-		
-		 
-  var html = "";
-
-for(var i=0;i< myArray.length;i++)
-{
-  html += '<li id='+ i +'>' + '<a href="#'+myArray[i]+'">'+ '<h1> '+ myArray[i] + '</h1>' + '<img src="' + myImages[i] + '" alt= "' + myArray[i] +'" /> <p>' + mydiscription[i]+' </p></a></li> ';
-
-}
- 
-   var res = document.getElementById('inhoud');
-   
-  res.innerHTML = html;
-       
-    }
-    function toestelInfo() {
-    var element = document.getElementById('info');
-
-    element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                        'Device PhoneGap: ' + device.phonegap + '<br />' + 
-                        'Device Platform: ' + device.platform + '<br />' + 
-                        'Device UUID: '     + device.uuid     + '<br />' + 
-                        'Device Version: '  + device.version  + '<br />';
-}
-    function bijSucces(imageData) {
-
-      var smallImage = document.getElementById('smallImage');
-
-      smallImage.style.display = 'block';
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-
-    }
-    function toonIndex(i) {
-
-     alert(i);
-
-    }
-    function maakFoto() {
-       navigator.camera.getPicture(bijSucces, bijFalen, { quality: 20,
-                   destinationType: Camera.DestinationType.DATA_URL});
-    }
-    function bijFalen(message) {
-
-      alert('Niet gelukt omdat ' + message);
-    }
-    function waarBenIk() {
-                navigator.geolocation.getCurrentPosition(success, error);
-            }
-    function success(position) {
-			
-                var element = document.getElementById('locatie');
-                element.innerHTML = 'Latitude: ' + position.coords.latitude     + '<br />' +
-                'Longitude: '           + position.coords.longitude             + '<br />' +
-                'Altitude: '            + position.coords.altitude              + '<br />' +
-                'Accuracy: '            + position.coords.accuracy              + '<br />' +
-                'Altitude Accuracy: '   + position.coords.altitudeAccuracy      + '<br />' +
-                'Heading: '             + position.coords.heading               + '<br />' +
-                'Speed: '               + position.coords.speed                 + '<br />' +
-                'Timestamp: '           + new Date(position.timestamp)          + '<br />';
-            }
-    function error(error) {
-                alert(error.message);
-            }
-    </script>
-
-
+            <link rel="stylesheet" type="text/css" href="css/styles.css">
  </head>
   <body>
   
@@ -113,7 +35,11 @@ for(var i=0;i< myArray.length;i++)
 	</div>
        	<div data-role="content">
   		<ul id="inhoud" data-role="listview" data-filter="true" data-inset="true">
-  			
+  			 <li><a href="#otders">Orders</a></li>
+  			 <li><a href="#users">Users</a></li>
+  			 <li><a href="#product">Product</a></li>
+  			 <li><a href="#history">History</a></li>
+  			  <li><a href="#Veg">Images layout</a></li>
   			
   		</ul>
 	
